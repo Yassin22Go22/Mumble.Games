@@ -1,12 +1,13 @@
-/* Ensure proper scaling for all elements */
+/* Reset margins and padding for a clean layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Wrapper to center content */
-.wrapper {
+/* Main container centers everything */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,48 +16,59 @@
     padding: 10px;
 }
 
-/* Make images responsive */
-.center-image, .background-image {
+/* Banner image (scales properly) */
+.banner {
     max-width: 90%;
     height: auto;
 }
 
-/* Container for text & button */
-.container {
-    max-width: 90%;
+/* Content section */
+.content {
+    width: 90%;
+    max-width: 400px;
     margin-top: 20px;
 }
 
-/* Responsive text */
-.foreground-text {
-    font-size: 1em;
-    line-height: 1.5;
+/* Blub image (adjusts size automatically) */
+.blub {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Text styling */
+.text {
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 /* Button styling */
-.ButtonGames {
-    font-size: 1em;
+.button {
+    font-size: 1rem;
     padding: 10px 20px;
     border: none;
     background-color: #007bff;
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
-/* Mobile-specific styles */
+/* Mobile adjustments */
 @media (max-width: 600px) {
-    .background-image {
+    .banner {
+        max-width: 95%;
+    }
+
+    .blub {
         max-width: 70%;
     }
 
-    .foreground-text {
-        font-size: 0.9em;
+    .text {
+        font-size: 0.9rem;
     }
 
-    .ButtonGames {
-        font-size: 0.9em;
+    .button {
+        font-size: 0.9rem;
         padding: 8px 16px;
     }
 }
