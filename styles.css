@@ -3,6 +3,10 @@
     src: url('fonts/Font.otf') format('opentype');
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color: white;
