@@ -1,4 +1,4 @@
-/* Reset margins and padding for a clean layout */
+/* Reset everything for a clean layout */
 * {
     margin: 0;
     padding: 0;
@@ -13,32 +13,29 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
 }
 
-/* Banner image (scales properly) */
+/* Banner image (100% width on mobile but limited size) */
 .banner {
-    max-width: 90%;
+    width: 100%;
+    max-width: 300px;
     height: auto;
 }
 
-/* Content section */
-.content {
-    width: 90%;
-    max-width: 400px;
-    margin-top: 20px;
-}
-
-/* Blub image (adjusts size automatically) */
+/* Blub image (scales down on mobile) */
 .blub {
-    max-width: 80%;
+    width: 50%;
+    max-width: 170px;
     height: auto;
+    margin-top: 15px;
 }
 
 /* Text styling */
 .text {
     font-size: 1rem;
     margin-top: 10px;
+    max-width: 90%;
 }
 
 /* Button styling */
@@ -56,11 +53,11 @@
 /* Mobile adjustments */
 @media (max-width: 600px) {
     .banner {
-        max-width: 95%;
+        max-width: 250px;
     }
 
     .blub {
-        max-width: 70%;
+        width: 70%;
     }
 
     .text {
