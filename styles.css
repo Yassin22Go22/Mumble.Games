@@ -5,51 +5,71 @@
 
 body {
     background-color: black;
-}
-
-h1 {
     color: white;
+    font-family: 'MyCustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.center-image {
+    width: 100%;
+    max-width: 300px;
+    transform: translateY(-50%);
+}
+
+.content {
     position: relative;
-    text-align: center;
+    width: 100%;
 }
 
 .background-image {
     position: absolute;
-    top: -90px;
+    top: -85px;
+    left: 50%;
     transform: translateX(-160%) rotate(-7deg);
-    z-index: 1;
-}
-
-.ButtonGames {
-    position: relative;
-    top: 90px;
-    background-color: yellow;
-    border-radius: 20px;
-    padding: 10px;
-    width: 185px;
-    font-family: 'MyCustomFont', sans-serif;
-    font-size: 22px;
-    z-index: 2;
-    transition: transform 0.3s ease;
-}
-
-.ButtonGames:hover {
-    transform: scale(1.2);
+    width: 30%;
+    z-index: -2;
+    max-width: 170px;
 }
 
 .foreground-text {
-    position: relative;
-    top: 90px;
-    z-index: 2;
     background-color: #2bbfe5;
     border-radius: 10px;
     padding: 10px;
-    width: 520px;
+    width: 90%;
+    max-width: 520px;
+    font-size: 1.2em;
+    z-index: 5;
+    margin: 20px auto;
+}
+
+.ButtonGames {
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 10px;
     font-family: 'MyCustomFont', sans-serif;
-    font-size: 23px;
-    margin: 0 auto; /* Center the element horizontally */
-    text-align: center; /* Center the text inside the element */
+    width: 80%;
+    max-width: 200px;
+    z-index: 2;
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.ButtonGames:hover {
+    transform: scale(1.1);
 }
