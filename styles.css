@@ -3,11 +3,6 @@
     src: url('fonts/Font.otf') format('opentype');
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
-}
-
 body {
     background-color: black;
     color: white;
@@ -16,7 +11,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Ensure items are aligned at the top */
     height: 100vh;
     text-align: center;
 }
@@ -25,14 +20,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start; /* Ensure items are aligned at the top */
     width: 90%;
     max-width: 600px;
+    padding-top: 0; /* Add padding-top to ensure the container starts at the very top */
 }
 
 .center-image {
     width: 100%;
     max-width: 300px;
-    transform: translateY(-50%);
+    margin-top: 0; /* Ensure the image is at the top */
 }
 
 .content {
@@ -42,10 +39,11 @@ body {
 
 .background-image {
     position: absolute;
-    top: -85px;
+    top: 2px; /* Set a specific top position */
     left: 50%;
     transform: translateX(-160%) rotate(-7deg);
-    width: 30%;
+    width: 130px; /* Set a specific width */
+    height: 170px; /* Set a specific height to maintain size */
     z-index: -2;
     max-width: 170px;
 }
@@ -59,22 +57,77 @@ body {
     font-size: 1.2em;
     z-index: 5;
     margin: 20px auto;
+    transform: translateY(100%);
+    position: relative; /* Add this line */
 }
 
 .ButtonGames {
     background-color: yellow;
     border-radius: 20px;
+    
     padding: 10px;
     font-family: 'MyCustomFont', sans-serif;
     width: 80%;
     max-width: 200px;
     z-index: 2;
+    transform: translateY(280%);
     font-size: 1.1em;
     transition: transform 0.3s ease;
     border: none;
     cursor: pointer;
+    color: black;
 }
 
 .ButtonGames:hover {
+    transform: translateY(275%) scale(1.1);
+}
+
+.Socials {
+    transform: translateY(160%);
+    color: black;
+    background-color: #2da9c8;
+    font-size: 25px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.Socials img {
+    margin-right: 15px; /* Adjust the value as needed */
+    transition: transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+.Socials img:hover {
     transform: scale(1.1);
+}
+
+.developers {
+    transform: translateY(-20%);
+    color: black;
+    background-color: #2da9c8;
+    font-size: 25px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.Nerdo {
+    transform: translateY(100%)
+    translateX(70%)
+}
+
+.Finger {
+    transform: translateY(0%)
+    translateX(70%);
+    animation: moveUpDown 2s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0) translateX(70%);
+    }
+    50% {
+        transform: translateY(-20px) translateX(70%); /* Adjust the value as needed */
+    }
 }
