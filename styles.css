@@ -41,7 +41,7 @@ body {
     position: absolute;
     top: 2px; /* Set a specific top position */
     left: 50%;
-    transform: translateX(-160%) rotate(-7deg);
+    transform: translateX(-150%) rotate(-7deg);
     width: 130px; /* Set a specific width */
     height: 170px; /* Set a specific height to maintain size */
     z-index: -2;
@@ -114,20 +114,20 @@ body {
 
 .Nerdo {
     transform: translateY(100%)
-    translateX(70%)
+    translateX(60%)
 }
 
 .Finger {
-    transform: translateY(0%)
-    translateX(70%);
+    transform: translateY(10%)
+    translateX(60%);
     animation: moveUpDown 2s infinite; /* Adjust the duration as needed */
 }
 
 @keyframes moveUpDown {
     0%, 100% {
-        transform: translateY(0) translateX(70%);
+        transform: translateY(10) translateX(60%);
     }
     50% {
-        transform: translateY(-20px) translateX(70%); /* Adjust the value as needed */
+        transform: translateY(-10px) translateX(60%); /* Adjust the value as needed */
     }
 }
