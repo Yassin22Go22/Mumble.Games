@@ -113,12 +113,12 @@ body {
 
 .Nerdo {
     transform: translateY(100%)
-    translateX(55%)
+    translateX(50%)
 }
 
 .Finger {
     transform: translateY(10%)
-    translateX(55%);
+    translateX(50%);
     animation: moveUpDown 2s infinite; /* Adjust the duration as needed */
 }
 
@@ -135,10 +135,10 @@ a img {
 
 @keyframes moveUpDown {
     0%, 100% {
-        transform: translateY(10) translateX(55%);
+        transform: translateY(10) translateX(50%);
     }
     50% {
-        transform: translateY(-10px) translateX(55%); /* Adjust the value as needed */
+        transform: translateY(-10px) translateX(50%); /* Adjust the value as needed */
     }
 }
 
